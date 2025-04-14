@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="title">Speech Separation Result</h2>
+<p>Output file is located at: {{ output_file }}</p>
+<p>Output directory: {{ output_dir }}</p>
+<a class="button" href="/speech-separation">Process Another File</a>
+{% endblock %}

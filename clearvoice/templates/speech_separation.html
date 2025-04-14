@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="title">Speech Separation</h2>
+<form action="/speech-separation" method="post" enctype="multipart/form-data">
+  <div class="field">
+    <label class="label">Upload Mixed Audio/Video File (WAV/AVI)</label>
+    <div class="control">
+      <input class="input" type="file" name="file" accept=".wav,.avi">
+    </div>
+  </div>
+  <div class="control">
+    <button class="button is-primary" type="submit">Start Separation</button>
+  </div>
+</form>
+{% endblock %}
