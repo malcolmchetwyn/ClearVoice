@@ -3,7 +3,7 @@
 <h2 class="title">Speech Enhancement Result</h2>
 <p>Processed with model: {{ model }}</p>
 <audio controls>
-  <source src="/audio/{{ audio_file | basename }}" type="audio/wav">
+  <source src="/audio/{{ audio_filename }}" type="audio/wav">
   Your browser does not support the audio element.
 </audio>
 <br>

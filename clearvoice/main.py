@@ -57,10 +57,10 @@ async def speech_enhancement_post(
     output_path = os.path.join(output_dir, f"output_{model}.wav")
     myClearVoice.write(output_wav, output_path=output_path)
 
-    # Render result page (you could optionally embed an HTML audio player)
+    # Do this:
     return templates.TemplateResponse("speech_enhancement_result.html", {
         "request": request,
-        "audio_file": output_path,
+        "audio_filename": os.path.basename(output_path),  # just the filename
         "model": model
     })
 
