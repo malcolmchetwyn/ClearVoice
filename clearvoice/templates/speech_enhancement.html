@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="title">Speech Enhancement</h2>
+<form action="/speech-enhancement" method="post" enctype="multipart/form-data">
+  <div class="field">
+    <label class="label">Select Model</label>
+    <div class="control">
+      <div class="select">
+        <select name="model">
+          {% for m in models %}
+          <option value="{{ m }}">{{ m }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Upload Audio (WAV)</label>
+    <div class="control">
+      <input class="input" type="file" name="file" accept=".wav">
+    </div>
+  </div>
+
+  <div class="control">
+    <button class="button is-primary" type="submit">Start Processing</button>
+  </div>
+</form>
+{% endblock %}
